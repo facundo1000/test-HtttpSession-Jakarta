@@ -19,7 +19,7 @@ public class GuardarNombreSessionServlet extends HttpServlet {
 
         if (!username.isEmpty() || !username.isBlank()) {
             session.setAttribute("nombre", username);
-            resp.sendRedirect(getServletContext().getContextPath() + "/perfil-usuario");
+            resp.sendRedirect(req.getContextPath() + "/perfil-usuario");
         } else {
             session.invalidate();
             getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);

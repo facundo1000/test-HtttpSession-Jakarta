@@ -32,7 +32,7 @@ public class PerfilUsuarioServlet extends HttpServlet {
             out.println("   <ul>");
             out.println("   <li>Username: " + username + "</li>");
             out.println("   </ul>");
-            out.println("   <a href='" + getServletContext().getContextPath() + "/index.jsp'>Volver a Index</a>");
+            out.println("   <a href='" + req.getContextPath() + "/index.jsp'>Volver a Index</a>");
             out.println("   </body>");
             out.println("</html>");
         }
